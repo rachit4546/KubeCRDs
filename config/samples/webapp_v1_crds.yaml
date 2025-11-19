@@ -1,0 +1,9 @@
+apiVersion: webapp.example.com/v1
+kind: CRDs
+metadata:
+  labels:
+    app.kubernetes.io/name: kubecrds
+    app.kubernetes.io/managed-by: kustomize
+  name: crds-sample
+spec:
+  # TODO(user): Add fields here
