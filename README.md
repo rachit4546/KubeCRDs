@@ -141,5 +141,5 @@ metadata:
   name: my-app
   namespace: default
 spec:
-  image: nginx:1.25.2       
+  image: nginx:1.25.2        # Required: container image for the deployment
   replicas: 3      -->
