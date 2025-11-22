@@ -15,7 +15,7 @@ resources:
   controller: true
   domain: example.com
   group: webapp
-  kind: CRDs
+  kind: App
   path: github.com/rachit4645/KubeCRDs/api/v1
   version: v1
 version: "3"

@@ -5,9 +5,20 @@ metadata:
   name: manager-role
 rules:
 - apiGroups:
-  - webapp.example.com
+  - ""
   resources:
-  - crds
+  - events
+  verbs:
+  - create
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apps
+  resources:
+  - deployments
   verbs:
   - create
   - delete
@@ -17,16 +28,46 @@ rules:
   - update
   - watch
 - apiGroups:
-  - webapp.example.com
+  - apps
   resources:
-  - crds/finalizers
+  - deployments/status
+  verbs:
+  - get
+- apiGroups:
+  - apps.example.com
+  resources:
+  - apps
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apps.example.com
+  resources:
+  - apps/finalizers
   verbs:
   - update
 - apiGroups:
-  - webapp.example.com
+  - apps.example.com
   resources:
-  - crds/status
+  - apps/status
   verbs:
   - get
   - patch
   - update
+- apiGroups:
+  - coordination.k8s.io
+  resources:
+  - leases
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch

@@ -24,7 +24,7 @@ var _ = Describe("CRDs Controller", func() {
 
 	var (
 		appKey types.NamespacedName
-		app    *webappv1.CRDs
+		app    *webappv1.App
 	)
 
 	BeforeEach(func() {
@@ -34,7 +34,7 @@ var _ = Describe("CRDs Controller", func() {
 			Namespace: "default",
 		}
 		replicas := int32(2)
-		app = &webappv1.CRDs{
+		app = &webappv1.App{
 			ObjectMeta: metav1.ObjectMeta{
 				Name:      appKey.Name,
 				Namespace: appKey.Namespace,

@@ -178,7 +178,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	if err := (&controller.CRDsReconciler{
+	if err := (&controller.AppReconciler{
 		Client: mgr.GetClient(),
 		Scheme: mgr.GetScheme(),
 	}).SetupWithManager(mgr); err != nil {
